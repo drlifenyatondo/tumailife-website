@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | TumaiLife Technologies Co.</title>
     <link rel="icon" type="image/png" href="../assets/images/cropped-TumaiLife-Technologies-Logo-2.png">
-    <link rel="stylesheet" href="../style.css?v=8.0">
+    <link rel="stylesheet" href="./style.css?v=12.0">
+    <!-- Google reCAPTCHA v2 API -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -36,81 +38,81 @@
         </div>
     </header>
 
-    <!-- Page Hero Banner -->
+    <!-- Page Banner / Hero Section (Pill Tag Updated) -->
     <section class="page-header">
         <div class="container text-center">
             <span class="hero-tag">&lt;get_in_touch&gt;</span>
-            <h1>Let’s Build Something Exceptional Together</h1>
-            <p>Have a project in mind, need technical advice, or looking to collaborate? Reach out and let's get started.</p>
+            <h1>Let's Connect & Build Together</h1>
+            <p>Have a project in mind, need software maintenance, or want to consult on digital strategy? We're here to help.</p>
         </div>
     </section>
 
-    <!-- Contact Direct Info Grid + Main Consultation Form -->
-    <section class="contact-main-section" style="padding: 2rem 0 4rem 0;">
+    <!-- Main Contact Section -->
+    <section class="contact-section" style="padding: 2rem 0 4rem 0;">
         <div class="container">
-            <div class="grid grid-2" style="align-items: start; gap: 3rem;">
+            <div class="consultation-box">
+                
+                <!-- Contact Direct Info -->
+                <div class="consultation-content">
+                    <h2>Reach Out Directly</h2>
+                    <p style="margin-bottom: 2rem; color: var(--text-secondary);">We collaborate with clients locally and internationally to deliver reliable software solutions and human-centered web platforms.</p>
 
-                <!-- Contact Channels Card -->
-                <div class="card glass-card" style="padding: 2.5rem;">
-                    <span class="sub-title">// CONTACT DIRECTLY</span>
-                    <h2 style="font-size: 2rem; margin-bottom: 1.2rem;">Get Direct Support</h2>
-                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">Whether you are an organization seeking custom software, a business needing web maintenance, or a founder starting a platform, send a message or connect through direct channels.</p>
-
-                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
-                            <span style="font-size: 1.5rem;">📧</span>
+                    <div class="contact-info-list" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div class="contact-item" style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="font-size: 1.5rem; color: var(--cyan-glow);">✉️</span>
                             <div>
-                                <strong style="color: var(--cyan-glow); font-size: 0.95rem; display: block;">Email Us</strong>
-                                <a href="mailto:info@tumailife.com" style="color: var(--text-primary); font-size: 1rem;">info@tumailife.com</a>
+                                <strong style="color: var(--text-primary); display: block; font-size: 0.95rem;">Email Inquiry</strong>
+                                <a href="mailto:info@tumailife.com" style="color: var(--cyan-glow); font-size: 0.95rem;">info@tumailife.com</a>
                             </div>
                         </div>
 
-                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
-                            <span style="font-size: 1.5rem;">📍</span>
+                        <div class="contact-item" style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="font-size: 1.5rem; color: var(--cyan-glow);">📍</span>
                             <div>
-                                <strong style="color: var(--cyan-glow); font-size: 0.95rem; display: block;">Location</strong>
-                                <span style="color: var(--text-primary); font-size: 1rem;">Harare / Chitungwiza, Zimbabwe</span>
+                                <strong style="color: var(--text-primary); display: block; font-size: 0.95rem;">Location Base</strong>
+                                <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem;">Harare / Chitungwiza, Zimbabwe</p>
                             </div>
                         </div>
 
-                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
-                            <span style="font-size: 1.5rem;">⏱️</span>
+                        <div class="contact-item" style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="font-size: 1.5rem; color: var(--cyan-glow);">⚡</span>
                             <div>
-                                <strong style="color: var(--cyan-glow); font-size: 0.95rem; display: block;">Response Time</strong>
-                                <span style="color: var(--text-primary); font-size: 1rem;">Within 24 hours</span>
+                                <strong style="color: var(--text-primary); display: block; font-size: 0.95rem;">Turnaround Time</strong>
+                                <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem;">Engineers respond within 24 hours</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Main Contact Form -->
-                <div class="consultation-box" style="padding: 2.5rem; display: block;">
-                    <span class="sub-title">// SEND A MESSAGE</span>
-                    <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Project Inquiry</h2>
-                    
-                    <form class="consultation-form" action="#" method="POST">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Full Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email Address" required>
-                        </div>
-                        <div class="form-group">
-                            <select required>
-                                <option value="" disabled selected>Select Needed Service</option>
-                                <option value="custom">Custom Software Development</option>
-                                <option value="uiux">UI/UX Interface Design</option>
-                                <option value="seo">SEO & Growth Optimization</option>
-                                <option value="maintenance">Website Maintenance & Upgrades</option>
-                                <option value="other">General Inquiry / Consultation</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea rows="4" placeholder="Tell us about your project requirements or timeline..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
-                    </form>
-                </div>
+                <!-- Contact Form with reCAPTCHA Protection -->
+                <form class="consultation-form" action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Select Primary Interest</option>
+                            <option value="software">Custom Web / Software Development</option>
+                            <option value="uiux">UI/UX Interface Design</option>
+                            <option value="seo">SEO & Digital Growth</option>
+                            <option value="maintenance">Website Maintenance & Support</option>
+                            <option value="general">General Technical Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="Tell us about your project requirements or message..." required></textarea>
+                    </div>
+
+                    <!-- Active Google reCAPTCHA v2 Checkbox -->
+                    <div class="form-group" style="margin-bottom: 1.2rem;">
+                        <div class="g-recaptcha" data-sitekey="6LebweUtAAAAAOtnPZ7BzK3cuzdkgwa3iCRkftdD"></div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                </form>
 
             </div>
         </div>

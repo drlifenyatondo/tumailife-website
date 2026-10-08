@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services | TumaiLife Technologies Co.</title>
     <link rel="icon" type="image/png" href="../assets/images/cropped-TumaiLife-Technologies-Logo-2.png">
-    <link rel="stylesheet" href="../style.css?v=6.0">
+    <link rel="stylesheet" href="./style.css?v=12.0">
+    <!-- Google reCAPTCHA v2 API -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -36,7 +38,7 @@
         </div>
     </header>
 
-    <!-- Page Banner / Hero Section -->
+    <!-- Page Banner / Hero Section (Pill Tag Updated) -->
     <section class="page-header">
         <div class="container text-center">
             <span class="hero-tag">&lt;our_capabilities&gt;</span>
@@ -47,16 +49,16 @@
 
     <!-- Detailed Services Breakdown -->
     <section class="services-detail-section" style="padding: 2rem 0 4rem 0;">
-        <div class="container" style="display: flex; flex-direction: column; gap: 3rem;">
+        <div class="container" style="display: flex; flex-direction: column; gap: 2.5rem;">
 
             <!-- Service 1: Custom Software -->
-            <div class="service-detail-block" style="background: rgba(18, 26, 43, 0.55); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 24px; padding: 2.5rem; display: flex; align-items: center; gap: 3rem;">
-                <div class="service-text-col" style="flex: 1;">
+            <div id="custom-software" class="service-detail-block">
+                <div class="service-text-col">
                     <span class="sub-title">// 01. FULL-STACK ENGINEERING</span>
-                    <h2 style="font-size: 2rem; font-weight: 700; color: #f5f5f7; margin-bottom: 1rem;">Custom Software & Web Engineering</h2>
-                    <p style="color: #a1a1a6; font-size: 1rem; line-height: 1.7; margin-bottom: 1.2rem;">We build custom, scalable web applications and software systems designed around your operational requirements. From robust backend database logic to offline survey systems and dynamic portals, every platform is coded for speed, security, and flexibility.</p>
+                    <h2>Custom Software & Web Engineering</h2>
+                    <p>We build custom, scalable web applications and software systems designed around your operational requirements. From robust backend database logic to offline survey systems and dynamic portals, every platform is coded for speed, security, and flexibility.</p>
                     
-                    <div class="service-tags" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.5rem;">
+                    <div class="service-tags">
                         <span class="skill-pill">Custom Web Applications</span>
                         <span class="skill-pill">RESTful APIs & Supabase</span>
                         <span class="skill-pill">PostgreSQL Databases</span>
@@ -65,26 +67,26 @@
 
                     <a href="#consultation" class="btn btn-secondary">Request Custom Quote</a>
                 </div>
-                <div class="service-image-col" style="flex: 0 0 380px; max-width: 380px;">
+                <div class="service-image-col">
                     <div class="glass-img-frame">
-                        <img src="../assets/images/App-Development-Image.webp" alt="Custom Software Development" style="width: 100%; height: 280px; object-fit: cover; border-radius: 14px; display: block;">
+                        <img src="../assets/images/App-Development-Image.webp" alt="Custom Software Development" class="service-img">
                     </div>
                 </div>
             </div>
 
             <!-- Service 2: UI/UX Interface Design (Reversed Layout) -->
-            <div class="service-detail-block service-reversed" style="background: rgba(18, 26, 43, 0.55); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 24px; padding: 2.5rem; display: flex; align-items: center; gap: 3rem;">
-                <div class="service-image-col" style="flex: 0 0 380px; max-width: 380px;">
+            <div id="uiux-design" class="service-detail-block service-reversed">
+                <div class="service-image-col">
                     <div class="glass-img-frame">
-                        <img src="../assets/images/UI-and-UX-Design.avif" alt="UI/UX Interface Design" style="width: 100%; height: 280px; object-fit: cover; border-radius: 14px; display: block;">
+                        <img src="../assets/images/UI-and-UX-Design.avif" alt="UI/UX Interface Design" class="service-img">
                     </div>
                 </div>
-                <div class="service-text-col" style="flex: 1;">
+                <div class="service-text-col">
                     <span class="sub-title">// 02. INTERFACE ARTISTRY</span>
-                    <h2 style="font-size: 2rem; font-weight: 700; color: #f5f5f7; margin-bottom: 1rem;">UI/UX Interface Design</h2>
-                    <p style="color: #a1a1a6; font-size: 1rem; line-height: 1.7; margin-bottom: 1.2rem;">Great technology starts with effortless user experiences. We craft visual interfaces that combine sleek modern aesthetics with intuitive navigation. Utilizing Tailwind CSS, Figma layouts, and glassmorphism, we build responsive interfaces that engage visitors across mobile, tablet, and desktop screens.</p>
+                    <h2>UI/UX Interface Design</h2>
+                    <p>Great technology starts with effortless user experiences. We craft visual interfaces that combine sleek modern aesthetics with intuitive navigation. Utilizing Tailwind CSS, Figma layouts, and glassmorphism, we build responsive interfaces that engage visitors across mobile, tablet, and desktop screens.</p>
                     
-                    <div class="service-tags" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.5rem;">
+                    <div class="service-tags">
                         <span class="skill-pill">Wireframing & Prototyping</span>
                         <span class="skill-pill">Mobile-First Layouts</span>
                         <span class="skill-pill">Glassmorphism Aesthetics</span>
@@ -96,13 +98,13 @@
             </div>
 
             <!-- Service 3: SEO Optimization -->
-            <div class="service-detail-block" style="background: rgba(18, 26, 43, 0.55); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 24px; padding: 2.5rem; display: flex; align-items: center; gap: 3rem;">
-                <div class="service-text-col" style="flex: 1;">
+            <div id="seo-optimization" class="service-detail-block">
+                <div class="service-text-col">
                     <span class="sub-title">// 03. DIGITAL VISIBILITY</span>
-                    <h2 style="font-size: 2rem; font-weight: 700; color: #f5f5f7; margin-bottom: 1rem;">SEO & Growth Optimization</h2>
-                    <p style="color: #a1a1a6; font-size: 1rem; line-height: 1.7; margin-bottom: 1.2rem;">Ensure your website gets discovered by the right audience. We optimize technical site structure, meta markup, asset compression, and page load speeds to improve your organic rankings on Google and elevate overall user engagement.</p>
+                    <h2>SEO & Growth Optimization</h2>
+                    <p>Ensure your website gets discovered by the right audience. We optimize technical site structure, meta markup, asset compression, and page load speeds to improve your organic rankings on Google and elevate overall user engagement.</p>
                     
-                    <div class="service-tags" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.5rem;">
+                    <div class="service-tags">
                         <span class="skill-pill">Technical SEO Audits</span>
                         <span class="skill-pill">Page Speed Optimization</span>
                         <span class="skill-pill">Keyword & Schema Markup</span>
@@ -111,26 +113,26 @@
 
                     <a href="#consultation" class="btn btn-secondary">Boost Site Visibility</a>
                 </div>
-                <div class="service-image-col" style="flex: 0 0 380px; max-width: 380px;">
+                <div class="service-image-col">
                     <div class="glass-img-frame">
-                        <img src="../assets/images/SEO.jpg" alt="SEO Optimization Strategy" style="width: 100%; height: 280px; object-fit: cover; border-radius: 14px; display: block;">
+                        <img src="../assets/images/SEO.jpg" alt="SEO Optimization Strategy" class="service-img">
                     </div>
                 </div>
             </div>
 
             <!-- Service 4: Website Maintenance -->
-            <div class="service-detail-block service-reversed" style="background: rgba(18, 26, 43, 0.55); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 24px; padding: 2.5rem; display: flex; align-items: center; gap: 3rem;">
-                <div class="service-image-col" style="flex: 0 0 380px; max-width: 380px;">
+            <div id="website-maintenance" class="service-detail-block service-reversed">
+                <div class="service-image-col">
                     <div class="glass-img-frame">
-                        <img src="../assets/images/website-maintenance.webp" alt="Website Maintenance and Security" style="width: 100%; height: 280px; object-fit: cover; border-radius: 14px; display: block;">
+                        <img src="../assets/images/website-maintenance.webp" alt="Website Maintenance and Security" class="service-img">
                     </div>
                 </div>
-                <div class="service-text-col" style="flex: 1;">
+                <div class="service-text-col">
                     <span class="sub-title">// 04. RELIABILITY & SUPPORT</span>
-                    <h2 style="font-size: 2rem; font-weight: 700; color: #f5f5f7; margin-bottom: 1rem;">Website Maintenance & Security</h2>
-                    <p style="color: #a1a1a6; font-size: 1rem; line-height: 1.7; margin-bottom: 1.2rem;">Keep your digital assets operational, up-to-date, and protected against potential security threats. Our maintenance plans provide regular code updates, security patching, feature expansions, and performance monitoring so you can focus on running your core operations.</p>
+                    <h2>Website Maintenance & Security</h2>
+                    <p>Keep your digital assets operational, up-to-date, and protected against potential security threats. Our maintenance plans provide regular code updates, security patching, feature expansions, and performance monitoring so you can focus on running your core operations.</p>
                     
-                    <div class="service-tags" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.5rem;">
+                    <div class="service-tags">
                         <span class="skill-pill">24/7 Uptime Monitoring</span>
                         <span class="skill-pill">Core Security Patching</span>
                         <span class="skill-pill">Backup & Recovery</span>
@@ -145,7 +147,7 @@
     </section>
 
     <!-- Development Workflow Process Section -->
-    <section class="process-section" style="padding: 4rem 0;">
+    <section class="process-section" style="padding: 3.5rem 0;">
         <div class="container">
             <div class="section-header text-center">
                 <span class="sub-title">// OUR WORKFLOW</span>
@@ -203,6 +205,12 @@
                     <div class="form-group">
                         <textarea rows="3" placeholder="Tell us about your project or goal..." required></textarea>
                     </div>
+
+                    <!-- Active Google reCAPTCHA v2 -->
+                    <div class="form-group" style="margin-bottom: 1.2rem;">
+                        <div class="g-recaptcha" data-sitekey="6LebweUtAAAAAOtnPZ7BzK3cuzdkgwa3iCRkftdD"></div>
+                    </div>
+
                     <button type="submit" class="btn btn-primary w-100">Send Inquiry</button>
                 </form>
             </div>

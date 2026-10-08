@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TumaiLife Technologies Co. | Life and Tech Intertwined</title>
     <link rel="icon" type="image/png" href="./assets/images/cropped-TumaiLife-Technologies-Logo-2.png">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css?v=11.0">
+    <!-- Google reCAPTCHA v2 API -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -119,36 +121,42 @@
                 <h2 class="section-title">End-to-End Technology Capabilities</h2>
             </div>
             <div class="grid grid-3">
-                <div class="card">
+                <a href="./services/index.html#custom-software" class="card card-link">
                     <img src="./assets/images/App-Development-Image.webp" alt="Software Engineering" class="card-img">
                     <h3>App & Web Engineering</h3>
                     <p>Tailor-made web applications and cross-platform mobile apps structured for scale and efficiency.</p>
-                </div>
-                <div class="card">
+                    <span class="read-more-text">Read More →</span>
+                </a>
+                <a href="./services/index.html#uiux-design" class="card card-link">
                     <img src="./assets/images/UI-and-UX-Design.avif" alt="UI/UX Design" class="card-img">
                     <h3>UI/UX & Frontend Design</h3>
                     <p>Clean, sleek interfaces that engage visitors and convert clicks into long-term clients.</p>
-                </div>
-                <div class="card">
+                    <span class="read-more-text">Read More →</span>
+                </a>
+                <a href="./services/index.html#seo-optimization" class="card card-link">
                     <img src="./assets/images/SEO.jpg" alt="SEO Strategy" class="card-img">
                     <h3>SEO & Growth Strategy</h3>
                     <p>Data-backed search engine optimization ensuring your brand stays visible to target audiences.</p>
-                </div>
-                <div class="card">
+                    <span class="read-more-text">Read More →</span>
+                </a>
+                <a href="./services/index.html#cybersecurity" class="card card-link">
                     <img src="./assets/images/Web-security.jpeg" alt="Cybersecurity" class="card-img">
                     <h3>Cybersecurity & Data Safety</h3>
                     <p>Implementation of authentication standards, secure APIs, and encryption logic to protect data.</p>
-                </div>
-                <div class="card">
+                    <span class="read-more-text">Read More →</span>
+                </a>
+                <a href="./services/index.html#website-maintenance" class="card card-link">
                     <img src="./assets/images/website-maintenance.webp" alt="Maintenance" class="card-img">
                     <h3>Maintenance & Support</h3>
                     <p>Active server oversight, security patching, feature upgrades, and bug fixes around the clock.</p>
-                </div>
-                <div class="card">
+                    <span class="read-more-text">Read More →</span>
+                </a>
+                <a href="./services/index.html#custom-software" class="card card-link">
                     <img src="./assets/images/pexels-photo-270488.jpeg" alt="Custom Architectures" class="card-img">
                     <h3>Custom Backend Systems</h3>
                     <p>Scalable databases, REST API design, and backend logic engineered specifically for your workflow.</p>
-                </div>
+                    <span class="read-more-text">Read More →</span>
+                </a>
             </div>
         </div>
     </section>
@@ -204,12 +212,11 @@
                 </div>
             </div>
 
-            <!-- Techy Infinite Looping Logo Carousel with Active External Links -->
+            <!-- Techy Infinite Looping Logo Carousel -->
             <div class="partner-carousel-wrapper">
                 <span class="sub-title text-center">// TRUSTED BY INNOVATIVE BRANDS & ORGANIZATIONS</span>
                 <div class="logo-marquee">
                     <div class="marquee-track">
-                        <!-- Set 1 -->
                         <a href="http://theuniquekitchen.co.zw/" target="_blank" rel="noopener noreferrer" class="partner-logo-item">
                             <img src="./assets/images/The Unique Kittchen Logo.png" alt="The Unique Kitchen">
                         </a>
@@ -223,7 +230,7 @@
                             <img src="./assets/images/vfcbn logo.png" alt="Voices for Change Broadcasting Network">
                         </a>
 
-                        <!-- Duplicate Set for Seamless Continuous Loop -->
+                        <!-- Duplicate Set for Seamless Loop -->
                         <a href="http://theuniquekitchen.co.zw/" target="_blank" rel="noopener noreferrer" class="partner-logo-item">
                             <img src="./assets/images/The Unique Kittchen Logo.png" alt="The Unique Kitchen">
                         </a>
@@ -236,15 +243,13 @@
                         <a href="https://vfcbn.netlify.app/" target="_blank" rel="noopener noreferrer" class="partner-logo-item">
                             <img src="./assets/images/vfcbn logo.png" alt="Voices for Change Broadcasting Network">
                         </a>
-
-                        <!-- ADD MORE PARTNER LOGOS HERE EASILY -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Lead Consultation Form -->
+    <!-- Lead Consultation Form with Active Google reCAPTCHA -->
     <section id="consultation" class="consultation-section">
         <div class="container">
             <div class="consultation-box">
@@ -271,6 +276,12 @@
                     <div class="form-group">
                         <textarea rows="3" placeholder="Project details or requirements..." required></textarea>
                     </div>
+
+                    <!-- Active Google reCAPTCHA v2 Checkbox -->
+                    <div class="form-group" style="margin-bottom: 1.2rem;">
+                        <div class="g-recaptcha" data-sitekey="6LebweUtAAAAAOtnPZ7BzK3cuzdkgwa3iCRkftdD"></div>
+                    </div>
+
                     <button type="submit" class="btn btn-primary w-100">Send Inquiry</button>
                 </form>
             </div>

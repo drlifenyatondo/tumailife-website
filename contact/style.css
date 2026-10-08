@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Apple Liquid Glass & Developer Blue Theme - Services Page Stylesheet
+   Apple Liquid Glass & Developer Blue Theme - Contact Page Stylesheet
    ========================================================================== */
 
 :root {
@@ -149,7 +149,7 @@ a {
 
 .nav-toggle { display: none; background: none; border: none; cursor: pointer; }
 
-/* Buttons with Font Sizing to Prevent Text Overflow */
+/* Buttons with Font Scaling to Prevent Text Splitting */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -193,135 +193,9 @@ a {
 .w-100 { width: 100%; }
 .mt-1 { margin-top: 1rem; }
 
-/* Responsive Grids */
-.grid { display: grid; gap: 1.8rem; }
-.grid-2 { grid-template-columns: repeat(2, 1fr); }
-.grid-3 { grid-template-columns: repeat(3, 1fr); }
-.grid-4 { grid-template-columns: repeat(4, 1fr); }
+/* Consultation & Contact Form Box */
+.contact-section { padding: 3rem 0 4rem 0; }
 
-/* Fully Responsive Service Blocks */
-.service-detail-block {
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--glass-border);
-    border-radius: 24px;
-    padding: 2.5rem;
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    box-shadow: var(--glass-shadow);
-    width: 100%;
-}
-
-.service-text-col {
-    flex: 1;
-    min-width: 0;
-}
-
-.service-text-col h2 {
-    font-size: clamp(1.6rem, 4vw, 2rem);
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-}
-
-.service-text-col p {
-    color: var(--text-secondary);
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 1.2rem;
-}
-
-.service-image-col {
-    flex: 0 0 360px;
-    width: 100%;
-    max-width: 100%;
-}
-
-.glass-img-frame {
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--glass-border);
-    border-radius: 20px;
-    padding: 10px;
-    box-shadow: var(--glass-shadow);
-    width: 100%;
-}
-
-.service-img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 14px;
-    display: block;
-}
-
-.service-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    margin-bottom: 1.5rem;
-}
-
-.skill-pill {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--glass-border);
-    color: var(--text-primary);
-    font-size: 0.85rem;
-    padding: 0.4rem 0.9rem;
-    border-radius: 20px;
-}
-
-/* Process Cards */
-.process-card {
-    position: relative;
-    padding-top: 2.5rem;
-}
-
-.process-num {
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    font-family: 'SFMono-Regular', Consolas, monospace;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--cyan-glow);
-    opacity: 0.6;
-}
-
-.process-card h3 {
-    font-size: 1.2rem;
-    color: var(--text-primary);
-    margin-bottom: 0.6rem;
-}
-
-.process-card p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-}
-
-/* Cards & Services */
-.services-overview, .testimonials-section { padding: 3.5rem 0; }
-.section-header { text-align: center; margin-bottom: 2.5rem; }
-.section-title { font-size: 2.2rem; font-weight: 700; }
-
-.card {
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--glass-border);
-    border-radius: 20px;
-    padding: 1.8rem;
-    transition: all 0.35s ease;
-}
-
-.card:hover {
-    background: var(--glass-bg-hover);
-    border-color: var(--glass-border-glow);
-    transform: translateY(-6px);
-}
-
-/* Consultation Form */
-.consultation-section { padding: 4rem 0; }
 .consultation-box {
     background: var(--glass-bg);
     backdrop-filter: var(--glass-blur);
@@ -330,8 +204,16 @@ a {
     padding: 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+    gap: 3rem;
     align-items: center;
+    box-shadow: var(--glass-shadow);
+}
+
+.consultation-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
 }
 
 .consultation-form .form-group { margin-bottom: 1rem; }
@@ -345,6 +227,7 @@ a {
     border: 1px solid var(--glass-border);
     color: var(--text-primary);
     font-family: inherit;
+    font-size: 0.95rem;
 }
 
 .consultation-form input:focus,
@@ -352,6 +235,7 @@ a {
 .consultation-form textarea:focus {
     outline: none;
     border-color: var(--accent-blue);
+    box-shadow: 0 0 12px rgba(0, 113, 227, 0.3);
 }
 
 /* Footer */
@@ -374,29 +258,12 @@ a {
 .footer-legal-links a { color: var(--text-secondary); text-decoration: none; margin: 0 0.4rem; }
 .footer-legal-links a:hover { color: var(--cyan-glow); }
 
-/* Responsive Adjustments for Mobile & Tablet */
+/* Responsive Adjustments */
 @media (max-width: 992px) {
-    .service-detail-block {
-        flex-direction: column;
-        padding: 1.8rem;
-        gap: 1.8rem;
-    }
-    .service-detail-block.service-reversed {
-        flex-direction: column-reverse;
-    }
-    .service-image-col {
-        flex: 0 0 100%;
-        width: 100%;
-    }
-    .service-img {
-        height: 240px;
-    }
-    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .consultation-box { grid-template-columns: 1fr; padding: 2rem; gap: 2rem; }
 }
 
 @media (max-width: 768px) {
-    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
-    .consultation-box { grid-template-columns: 1fr; padding: 2rem; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
 
     .site-logo {
@@ -466,5 +333,4 @@ a {
 @media (max-width: 576px) {
     .footer-grid { grid-template-columns: 1fr; }
     .page-header h1 { font-size: 2rem; }
-    .service-img { height: 210px; }
 }

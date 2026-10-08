@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Use | TumaiLife Technologies Co.</title>
     <link rel="icon" type="image/png" href="./assets/images/cropped-TumaiLife-Technologies-Logo-2.png">
-    <link rel="stylesheet" href="./style.css?v=9.0">
+    <link rel="stylesheet" href="./style.css?v=11.0">
+    <!-- Google reCAPTCHA v2 API -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -37,7 +39,7 @@
     </header>
 
     <!-- Page Banner -->
-    <section class="page-header">
+    <section class="page-header" style="padding: 3rem 0 2rem 0;">
         <div class="container text-center">
             <span class="hero-tag">&lt;terms_and_conditions&gt;</span>
             <h1>Terms of Use</h1>
@@ -76,7 +78,7 @@
                 <h2 style="font-size: 1.4rem; color: #ffffff; margin: 2rem 0 0.8rem 0;">6. Updates to These Terms</h2>
                 <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">We reserve the right to modify these Terms of Use at any time. Any changes will take effect immediately upon being posted to this page.</p>
 
-                <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center;">
+                <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
                     <a href="./privacy-policy.html" class="btn btn-secondary">View Privacy Policy</a>
                     <a href="./contact/index.html" class="btn btn-primary">Contact Us</a>
                 </div>
@@ -115,13 +117,17 @@
             </div>
             <div class="footer-col">
                 <h4>Legal & Info</h4>
-                <p><a href="./privacy-policy.html" style="color: var(--text-secondary);">Privacy Policy</a></p>
+                <p><a href="./privacy-policy.html">Privacy Policy</a></p>
                 <p><a href="./terms-of-use.html" style="color: var(--cyan-glow);">Terms of Use</a></p>
                 <p>Email: info@tumailife.com</p>
             </div>
         </div>
-        <div class="container footer-bottom">
+        <div class="footer-bottom">
             <p>&copy; 2026 TumaiLife Technologies Co. All rights reserved.</p>
+            <div class="footer-legal-links">
+                <a href="privacy-policy.html">Privacy Policy</a> |
+                <a href="terms-of-use.html">Terms of Use</a>
+            </div>
         </div>
     </footer>
 

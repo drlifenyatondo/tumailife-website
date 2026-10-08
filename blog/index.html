@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog | TumaiLife Technologies Co.</title>
+    <link rel="icon" type="image/png" href="../assets/images/cropped-TumaiLife-Technologies-Logo-2.png">
+    <link rel="stylesheet" href="../style.css?v=8.0">
+</head>
+
+<body>
+
+    <!-- Glassmorphic Responsive Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo-link">
+                <picture>
+                    <source media="(max-width: 576px)" srcset="../assets/images/cropped-TumaiLife-Technologies-Logo-2.png">
+                    <source media="(max-width: 992px)" srcset="../assets/images/TumaiLife-Technologies-Logo-3.png">
+                    <img src="../assets/images/TumaiLife-Technologies-Logo-3.png" alt="TumaiLife Technologies Logo" class="site-logo">
+                </picture>
+            </a>
+
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../about/index.html" class="nav-link">About</a>
+                <a href="../services/index.html" class="nav-link">Services</a>
+                <a href="../blog/index.html" class="nav-link active">Blog</a>
+                <a href="../contact/index.html" class="btn btn-primary">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner / Hero Section -->
+    <section class="page-header">
+        <div class="container text-center">
+            <span class="hero-tag">&lt;developer_insights&gt;</span>
+            <h1>Engineering Insights & Tech Perspectives</h1>
+            <p>Articles on full-stack architecture, UI design principles, web security, and digital innovation.</p>
+        </div>
+    </section>
+
+    <!-- Topic Categories Filter (Functional via script.js) -->
+    <section class="blog-filter-section" style="padding-bottom: 2rem;">
+        <div class="container">
+            <div class="stack-grid">
+                <span class="stack-badge active-filter"><span class="badge-icon">✨</span> All Posts</span>
+                <span class="stack-badge"><span class="badge-icon">&lt;/&gt;</span> Web Development</span>
+                <span class="stack-badge"><span class="badge-icon">🎨</span> UI/UX Design</span>
+                <span class="stack-badge"><span class="badge-icon">🛡️</span> Security & APIs</span>
+                <span class="stack-badge"><span class="badge-icon">⚡</span> Performance & SEO</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Hero Post -->
+    <section class="featured-post-section" style="padding: 1rem 0 3rem 0;">
+        <div class="container">
+            <div class="feature-block grid-2" style="background: rgba(18, 26, 43, 0.65); border: 1px solid var(--glass-border-glow);">
+                <div class="feature-image-wrap" style="height: 320px;">
+                    <a href="./building-resilient-web-apps.html">
+                        <img src="../assets/images/pexels-photo-270488.jpeg" alt="Building Offline Web Systems" class="fitted-img">
+                    </a>
+                </div>
+                <div class="feature-text-wrap">
+                    <span class="hero-tag">&lt;FEATURED_ARTICLE&gt;</span>
+                    <h2 style="font-size: 1.8rem; margin: 0.5rem 0 1rem 0;">
+                        <a href="./building-resilient-web-apps.html" style="color: #ffffff; text-decoration: none;">Building Resilient Web Applications with Offline Data Synchronization</a>
+                    </h2>
+                    <p>Exploring how combining modern frontend stacks like Vite and React with Supabase backend logic allows community applications to collect data reliably even in low-connectivity areas.</p>
+                    
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1.5rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem; color: #a1a1a6; font-size: 0.85rem;">
+                            <span>✍️ Purity M. Nyatondo</span>
+                            <span>📅 Sep 2026</span>
+                            <span>⏱️ 5 min read</span>
+                        </div>
+                        <a href="./building-resilient-web-apps.html" class="btn btn-secondary">Read Article →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Articles Grid -->
+    <section class="blog-grid-section" style="padding: 2rem 0 4rem 0;">
+        <div class="container">
+            <div class="grid grid-3">
+
+                <!-- Article Card 1 -->
+                <div class="card blog-card">
+                    <a href="./glassmorphism-web-ui.html">
+                        <img src="../assets/images/UI-and-UX-Design.avif" alt="Glassmorphism in Web Design" class="card-img">
+                    </a>
+                    <span class="sub-title">// UI/UX DESIGN</span>
+                    <h3><a href="./glassmorphism-web-ui.html" style="color: inherit;">Why Liquid Glass & Glassmorphism Work So Well for Modern Web UI</a></h3>
+                    <p>How subtle translucent layers, soft light reflections, and blurred backdrops create depth without sacrificing readability.</p>
+                    <div class="blog-card-footer">
+                        <span class="post-date">Jul 2026</span>
+                        <a href="./glassmorphism-web-ui.html" class="read-more-link">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Article Card 2 -->
+                <div class="card blog-card">
+                    <a href="./web-security-best-practices.html">
+                        <img src="../assets/images/Web-security.jpeg" alt="Web Security Fundamentals" class="card-img">
+                    </a>
+                    <span class="sub-title">// SECURITY & APIS</span>
+                    <h3><a href="./web-security-best-practices.html" style="color: inherit;">Essential Security Best Practices Every Web Platform Must Implement</a></h3>
+                    <p>A quick breakdown of REST API authorization policies, Supabase Row Level Security, and safeguarding form endpoints.</p>
+                    <div class="blog-card-footer">
+                        <span class="post-date">Jun 2026</span>
+                        <a href="./web-security-best-practices.html" class="read-more-link">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Article Card 3 -->
+                <div class="card blog-card">
+                    <a href="./mastering-web-vitals.html">
+                        <img src="../assets/images/SEO.jpg" alt="SEO Optimization Strategies" class="card-img">
+                    </a>
+                    <span class="sub-title">// PERFORMANCE & SEO</span>
+                    <h3><a href="./mastering-web-vitals.html" style="color: inherit;">Mastering Web Vitals: How Load Speeds Directly Impact Search Rankings</a></h3>
+                    <p>Practical ways to optimize asset compression, clean CSS delivery, and JavaScript execution to pass Core Web Vitals.</p>
+                    <div class="blog-card-footer">
+                        <span class="post-date">May 2026</span>
+                        <a href="./mastering-web-vitals.html" class="read-more-link">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Article Card 4 -->
+                <div class="card blog-card">
+                    <a href="./structuring-clean-codebases.html">
+                        <img src="../assets/images/App-Development-Image.webp" alt="Clean Code Architectures" class="card-img">
+                    </a>
+                    <span class="sub-title">// WEB DEVELOPMENT</span>
+                    <h3><a href="./structuring-clean-codebases.html" style="color: inherit;">Structuring Clean Codebases for Easy Long-Term Maintenance</a></h3>
+                    <p>Why avoiding bloated libraries and writing clean, modular HTML5 and CSS keeps web applications fast and easy to update.</p>
+                    <div class="blog-card-footer">
+                        <span class="post-date">Apr 2026</span>
+                        <a href="./structuring-clean-codebases.html" class="read-more-link">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Article Card 5 -->
+                <div class="card blog-card">
+                    <a href="./website-maintenance-guide.html">
+                        <img src="../assets/images/website-maintenance.webp" alt="Website Maintenance Checklist" class="card-img">
+                    </a>
+                    <span class="sub-title">// SECURITY & APIS</span>
+                    <h3><a href="./website-maintenance-guide.html" style="color: inherit;">Why Regular Site Maintenance Prevents Hidden Downtime & Flaws</a></h3>
+                    <p>A breakdown of server log monitoring, database backups, and active patching strategies for web platforms.</p>
+                    <div class="blog-card-footer">
+                        <span class="post-date">Mar 2026</span>
+                        <a href="./website-maintenance-guide.html" class="read-more-link">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Article Card 6 -->
+                <div class="card blog-card">
+                    <a href="./life-and-tech-intertwined.html">
+                        <img src="../assets/images/pexels-photo-3184612.jpeg" alt="Human Centered Technology" class="card-img">
+                    </a>
+                    <span class="sub-title">// WEB DEVELOPMENT</span>
+                    <h3><a href="./life-and-tech-intertwined.html" style="color: inherit;">Life and Tech Intertwined: Designing Digital Tools for Human Needs</a></h3>
+                    <p>How technical choices directly impact user trust, accessibility, and real-world adoption for digital systems.</p>
+                    <div class="blog-card-footer">
+                        <span class="post-date">Feb 2026</span>
+                        <a href="./life-and-tech-intertwined.html" class="read-more-link">Read Article →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col footer-brand">
+                <picture>
+                    <source media="(max-width: 576px)" srcset="../assets/images/cropped-TumaiLife-Technologies-Logo-2.png">
+                    <img src="../assets/images/TumaiLife-Technologies-Logo-4.png" alt="TumaiLife Logo" class="footer-logo">
+                </picture>
+                <p>Integrating human-centered design with modern technology to create digital solutions that move businesses forward.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about/index.html">About Us</a></li>
+                    <li><a href="../services/index.html">Our Services</a></li>
+                    <li><a href="../blog/index.html">Tech Blog</a></li>
+                    <li><a href="../contact/index.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="../services/index.html">Custom Software</a></li>
+                    <li><a href="../services/index.html">UI/UX Interface Design</a></li>
+                    <li><a href="../services/index.html">SEO Optimization</a></li>
+                    <li><a href="../services/index.html">Website Maintenance</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p>Email: info@tumailife.com</p>
+                <p>Location: Harare / Chitungwiza, Zimbabwe</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TumaiLife Technologies Co. All rights reserved.</p>
+            <div class="footer-legal-links">
+                <a href="../privacy-policy.html">Privacy Policy</a> |
+                <a href="../terms-of-use.html">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

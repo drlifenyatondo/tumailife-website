@@ -175,32 +175,32 @@
                     <h2>Want to Work Together?</h2>
                     <p>Whether you need a new web application built from scratch or need ongoing tech support, let's connect and turn your ideas into reality.</p>
                 </div>
-                <form class="consultation-form" action="#" method="POST">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email Address" required>
-                    </div>
-                    <div class="form-group">
-                        <select required>
-                            <option value="" disabled selected>Select Inquiry Type</option>
-                            <option value="custom">Custom Web / App Project</option>
-                            <option value="consultation">Tech Consultation</option>
-                            <option value="maintenance">Site Maintenance & Upgrades</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea rows="3" placeholder="Tell me about your project or goal..." required></textarea>
-                    </div>
+                <form class="consultation-form" action="https://formspree.io/f/mgaokqke" method="POST">
+    <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email Address" required>
+    </div>
+    <div class="form-group">
+        <select name="inquiry_type" required>
+            <option value="" disabled selected>Select Inquiry Type</option>
+            <option value="custom">Custom Web / App Project</option>
+            <option value="consultation">Tech Consultation</option>
+            <option value="maintenance">Site Maintenance & Upgrades</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <textarea name="message" rows="3" placeholder="Tell me about your project or goal..." required></textarea>
+    </div>
 
-                    <!-- Active Google reCAPTCHA v2 -->
-                    <div class="form-group" style="margin-bottom: 1.2rem;">
-                        <div class="g-recaptcha" data-sitekey="6LebweUtAAAAAOtnPZ7BzK3cuzdkgwa3iCRkftdD"></div>
-                    </div>
+    <!-- Active Google reCAPTCHA v2 -->
+    <div class="form-group" style="margin-bottom: 1.2rem;">
+        <div class="g-recaptcha" data-sitekey="6LebweUtAAAAAOtnPZ7BzK3cuzdkgwa3iCRkftdD"></div>
+    </div>
 
-                    <button type="submit" class="btn btn-primary w-100">Send Inquiry</button>
-                </form>
+    <button type="submit" class="btn btn-primary w-100">Send Inquiry</button>
+</form>
             </div>
         </div>
     </section>

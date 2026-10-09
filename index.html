@@ -256,34 +256,35 @@
                 <div class="consultation-content">
                     <h2>Ready to Build Your Next Digital Solution?</h2>
                     <p>Send us a brief message about your project requirements and our engineering team will get back to you within 24 hours.</p>
-                </div>
-                <form class="consultation-form" action="https://formspree.io/f/mgaokqke" method="POST">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email Address" required>
-                    </div>
-                    <div class="form-group">
-                        <select required>
-                            <option value="" disabled selected>Select Service Required</option>
-                            <option value="web">Web & Software Development</option>
-                            <option value="uiux">UI/UX Design</option>
-                            <option value="seo">SEO & Digital Strategy</option>
-                            <option value="maintenance">Maintenance & Security</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea rows="3" placeholder="Project details or requirements..." required></textarea>
-                    </div>
+                </div><form class="consultation-form" action="https://formspree.io/f/mgaokqke" method="POST">
+    <div class="form-group">
+        <!-- Make sure name="name" is added -->
+        <input type="text" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+        <!-- Formspree uses name="email" as the reply-to address -->
+        <input type="email" name="email" placeholder="Your Email Address" required>
+    </div>
+    <div class="form-group">
+        <!-- Make sure name="inquiry_type" is added -->
+        <select name="inquiry_type" required>
+            <option value="" disabled selected>Select Inquiry Type</option>
+            <option value="Custom Web / App Project">Custom Web / App Project</option>
+            <option value="Tech Consultation">Tech Consultation</option>
+            <option value="Site Maintenance & Upgrades">Site Maintenance & Upgrades</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <!-- Make sure name="message" is added -->
+        <textarea name="message" rows="3" placeholder="Tell me about your project or goal..." required></textarea>
+    </div>
 
-                    <!-- Active Google reCAPTCHA v2 Checkbox -->
-                    <div class="form-group" style="margin-bottom: 1.2rem;">
-                        <div class="g-recaptcha" data-sitekey="6LebweUtAAAAAOtnPZ7BzK3cuzdkgwa3iCRkftdD"></div>
-                    </div>
+    <div class="form-group" style="margin-bottom: 1.2rem;">
+        <div class="g-recaptcha" data-sitekey="6LebweUtAAAAAOtnPZ7BzK3cuzdkgwa3iCRkftdD"></div>
+    </div>
 
-                    <button type="submit" class="btn btn-primary w-100">Send Inquiry</button>
-                </form>
+    <button type="submit" class="btn btn-primary w-100">Send Inquiry</button>
+</form>
             </div>
         </div>
     </section>

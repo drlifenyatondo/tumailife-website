@@ -137,21 +137,24 @@
                 <h2 class="section-title">Leadership & Development</h2>
             </div>
 
-            <div class="leader-hero-block">
+            <div class="leader-hero-block" itemscope itemtype="https://schema.org/Person">
                 <!-- Left Side: Glass Framed Image -->
                 <div class="leader-image-col">
                     <div class="glass-img-frame">
-                        <img src="../assets/images/SmartSelect_20260424_143338_Gallery.png" alt="Purity Mufarowashe Nyatondo" class="leader-portrait">
+                        <img src="../assets/images/SmartSelect_20260424_143338_Gallery.png" alt="Purity Mufarowashe Nyatondo" class="leader-portrait" itemprop="image">
                     </div>
                 </div>
 
                 <!-- Right Side: Developer Meta & Bio -->
                 <div class="leader-content-col">
                     <span class="hero-tag">&lt;founder_and_lead_developer&gt;</span>
-                    <h3>Purity Mufarowashe Nyatondo</h3>
-                    <span class="team-role">Lead Developer & Tech Specialist</span>
+                    <h3 itemprop="name">Purity Mufarowashe Nyatondo</h3>
+                    <div style="display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
+                        <span class="team-role" itemprop="jobTitle" style="margin-bottom: 0;">Lead Developer & Tech Specialist</span>
+                        <span class="skill-pill" style="color: var(--cyan-glow); border-color: var(--cyan-glow); padding: 0.2rem 0.8rem; font-size: 0.8rem;">He / Him / His</span>
+                    </div>
                     
-                    <p>As the Lead Developer and Founder of TumaiLife Technologies Co., I handle full-stack web architectures, modern user interface design, secure backend infrastructures, and client platform deployments from the ground up.</p>
+                    <p itemprop="description">As the Lead Developer and Founder of TumaiLife Technologies Co., I handle full-stack web architectures, modern user interface design, secure backend infrastructures, and client platform deployments from the ground up.</p>
 
                     <div class="leader-skills-list">
                         <div class="skill-pill">Frontend Architecture</div>
@@ -176,31 +179,31 @@
                     <p>Whether you need a new web application built from scratch or need ongoing tech support, let's connect and turn your ideas into reality.</p>
                 </div>
                 <form class="consultation-form" action="https://formspree.io/f/mgaokqke" method="POST">
-    <div class="form-group">
-        <input type="text" name="name" placeholder="Your Name" required>
-    </div>
-    <div class="form-group">
-        <input type="email" name="email" placeholder="Your Email Address" required>
-    </div>
-    <div class="form-group">
-        <select name="inquiry_type" required>
-            <option value="" disabled selected>Select Inquiry Type</option>
-            <option value="custom">Custom Web / App Project</option>
-            <option value="consultation">Tech Consultation</option>
-            <option value="maintenance">Site Maintenance & Upgrades</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <textarea name="message" rows="3" placeholder="Tell me about your project or goal..." required></textarea>
-    </div>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="inquiry_type" required>
+                            <option value="" disabled selected>Select Inquiry Type</option>
+                            <option value="custom">Custom Web / App Project</option>
+                            <option value="consultation">Tech Consultation</option>
+                            <option value="maintenance">Site Maintenance & Upgrades</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="3" placeholder="Tell me about your project or goal..." required></textarea>
+                    </div>
 
-    <!-- Active Google reCAPTCHA v2 -->
-    <div class="form-group" style="margin-bottom: 1.2rem;">
-        <div class="g-recaptcha" data-sitekey="6LebweUtAAAAAOtnPZ7BzK3cuzdkgwa3iCRkftdD"></div>
-    </div>
+                    <!-- Active Google reCAPTCHA v2 -->
+                    <div class="form-group" style="margin-bottom: 1.2rem;">
+                        <div class="g-recaptcha" data-sitekey="6LebweUtAAAAAOtnPZ7BzK3cuzdkgwa3iCRkftdD"></div>
+                    </div>
 
-    <button type="submit" class="btn btn-primary w-100">Send Inquiry</button>
-</form>
+                    <button type="submit" class="btn btn-primary w-100">Send Inquiry</button>
+                </form>
             </div>
         </div>
     </section>

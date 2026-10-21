@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navToggle.classList.toggle('open');
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!navMenu.contains(e.target) && !navToggle.contains(e.target) && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
@@ -21,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close menu on scroll
         window.addEventListener('scroll', () => {
             if (navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
@@ -40,11 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
         filterBadges.forEach((badge) => {
             badge.addEventListener('click', (e) => {
                 e.preventDefault();
-
-                // Extract text clean without badge brackets or icons
                 const selectedCategory = badge.textContent.replace(/\[.*?\]/g, '').trim().toUpperCase();
 
-                // Update active class on all matching badges (handles loop clones)
                 filterBadges.forEach(b => {
                     const badgeText = b.textContent.replace(/\[.*?\]/g, '').trim().toUpperCase();
                     if (badgeText === selectedCategory) {
@@ -54,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
 
-                // Filter article cards based on .sub-title text
                 blogCards.forEach((card) => {
                     const cardCategory = card.querySelector('.sub-title');
                     if (!cardCategory) return;
@@ -73,5 +67,97 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    /* ==========================================================================
+       3. Free AJAX Form Submission & reCAPTCHA Validation (No Upgrade Needed)
+       ========================================================================== */
+    const consultationForms = document.querySelectorAll('.consultation-form');
+
+    consultationForms.forEach((form) => {
+        // Create an error feedback element if not already present inside the form
+        let statusMessage = form.querySelector('.form-status-msg');
+        if (!statusMessage) {
+            statusMessage = document.createElement('div');
+            statusMessage.className = 'form-status-msg';
+            statusMessage.style.cssText = 'display:none; margin-bottom: 1rem; padding: 0.75rem 1rem; border-radius: 10px; font-size: 0.88rem; font-weight: 500; text-align: center;';
+            const submitBtn = form.querySelector('button[type="submit"]');
+            if (submitBtn) {
+                form.insertBefore(statusMessage, submitBtn);
+            } else {
+                form.appendChild(statusMessage);
+            }
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // 1. Verify Google reCAPTCHA completion
+            let recaptchaResponse = '';
+            if (typeof grecaptcha !== 'undefined') {
+                recaptchaResponse = grecaptcha.getResponse();
+            }
+
+            if (!recaptchaResponse || recaptchaResponse.trim() === '') {
+                statusMessage.style.display = 'block';
+                statusMessage.style.background = 'rgba(255, 59, 48, 0.15)';
+                statusMessage.style.border = '1px solid rgba(255, 59, 48, 0.4)';
+                statusMessage.style.color = '#ff453a';
+                statusMessage.textContent = '⚠️ Please complete the reCAPTCHA verification before submitting.';
+                return;
+            }
+
+            // 2. Clear previous error state & show submitting indicator
+            statusMessage.style.display = 'block';
+            statusMessage.style.background = 'rgba(0, 113, 227, 0.15)';
+            statusMessage.style.border = '1px solid rgba(100, 210, 255, 0.3)';
+            statusMessage.style.color = '#64d2ff';
+            statusMessage.textContent = '⏳ Sending message...';
+
+            const submitBtn = form.querySelector('button[type="submit"]');
+            if (submitBtn) submitBtn.disabled = true;
+
+            // 3. Post data to Formspree asynchronously via AJAX
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Determine root depth for redirecting to thanks.html accurately
+                    const isSubfolder = window.location.pathname.includes('/about/') || 
+                                        window.location.pathname.includes('/services/') || 
+                                        window.location.pathname.includes('/blog/') || 
+                                        window.location.pathname.includes('/contact/');
+                    
+                    const redirectUrl = isSubfolder ? '../thanks.html' : './thanks.html';
+                    window.location.href = redirectUrl;
+                } else {
+                    const data = await response.json();
+                    statusMessage.style.background = 'rgba(255, 59, 48, 0.15)';
+                    statusMessage.style.border = '1px solid rgba(255, 59, 48, 0.4)';
+                    statusMessage.style.color = '#ff453a';
+                    
+                    if (Object.hasOwn(data, 'errors')) {
+                        statusMessage.textContent = '⚠️ ' + data["errors"].map(error => error["message"]).join(", ");
+                    } else {
+                        statusMessage.textContent = '⚠️ Oops! There was a problem submitting your form. Please try again.';
+                    }
+                    if (submitBtn) submitBtn.disabled = false;
+                }
+            } catch (error) {
+                statusMessage.style.background = 'rgba(255, 59, 48, 0.15)';
+                statusMessage.style.border = '1px solid rgba(255, 59, 48, 0.4)';
+                statusMessage.style.color = '#ff453a';
+                statusMessage.textContent = '⚠️ Network error. Please check your internet connection and try again.';
+                if (submitBtn) submitBtn.disabled = false;
+            }
+        });
+    });
 
 });
